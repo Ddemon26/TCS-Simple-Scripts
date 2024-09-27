@@ -1,0 +1,21 @@
+{
+  "name": "com.ddemon26.enumlibrary",
+  "displayName": "Unity Enum Library",
+  "description": "A system for creating and managing enums in Unity. for assets that require a lot of enums.",
+  "version": "1.0.0",
+  "keywords": [
+    "input",
+    "attribute",
+    "inspector",
+    "manager",
+    "editor"
+  ],
+  "category": "enum library",
+  "dependencies": {},
+  "author": {
+    "name": "Damon Fedorick",
+    "url": "https://github.com/Ddemon26/Enum-Library"
+  },
+  "documentationUrl": "https://github.com/Ddemon26/Input-Manager/blob/main/README.md",
+  "_fingerprint": "5dc9319ebce810d4344fe13da2f2f41b69ea0c8c"
+}
