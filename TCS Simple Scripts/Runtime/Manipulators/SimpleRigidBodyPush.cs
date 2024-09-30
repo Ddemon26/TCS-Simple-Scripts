@@ -1,9 +1,11 @@
 ﻿using Sirenix.OdinInspector;
 using UnityEngine;
-namespace TCS.SimpleScripts {
+namespace TCS.SimpleScripts.Manipulators {
     /// <summary>
     /// This class allows a GameObject with a CharacterController to push Rigidbodies.
     /// </summary>
+    [RequireComponent(typeof(CharacterController))]
+    [AddComponentMenu("TCS/SimpleScripts/Manipulators/Simple Rigidbody Push")]
     public class SimpleRigidBodyPush : MonoBehaviour {
         [Tooltip("Layers that can be pushed.")]
         [SerializeField] LayerMask m_pushLayers;
@@ -13,7 +15,7 @@ namespace TCS.SimpleScripts {
 
         [Tooltip("Indicates whether the GameObject can push other Rigidbodies.")]
         [ShowInInspector] public bool CanPush { get; private set; } = true;
-        
+
         /// <summary>
         /// Sets the setDialogueManager indicating whether the GameObject can push other Rigidbodies.
         /// </summary>
@@ -63,7 +65,6 @@ namespace TCS.SimpleScripts {
         /// </summary>
         /// <param name="moveDirection">The move direction of the controller.</param>
         /// <returns>The direction to push the Rigidbody.</returns>
-        static Vector3 CalculatePushDirection(Vector3 moveDirection) 
-            => new Vector3(moveDirection.x, 0.0f, moveDirection.z);
+        static Vector3 CalculatePushDirection(Vector3 moveDirection) => new Vector3(moveDirection.x, 0.0f, moveDirection.z);
     }
 }

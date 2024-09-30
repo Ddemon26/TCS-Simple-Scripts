@@ -1,6 +1,7 @@
 ﻿using System;
 using UnityEngine;
-namespace TCS.SimpleScripts
+using UnityEngine.Serialization;
+namespace TCS.SimpleScripts.FlyCamera
 {
     /// <summary>
     /// Represents an axis of movement, with positive and negative directions.
@@ -11,12 +12,14 @@ namespace TCS.SimpleScripts
         /// <summary>
         /// The key that represents positive movement along the axis.
         /// </summary>
-        public KeyCode Positive;
+        [FormerlySerializedAs("Positive")]
+        public KeyCode m_positive;
 
         /// <summary>
         /// The key that represents negative movement along the axis.
         /// </summary>
-        public KeyCode Negative;
+        [FormerlySerializedAs("Negative")]
+        public KeyCode m_negative;
 
         /// <summary>
         /// Creates a new MoveAxis with the specified positive and negative keys.
@@ -25,8 +28,8 @@ namespace TCS.SimpleScripts
         /// <param name="negative">The key that represents negative movement along the axis.</param>
         public MoveAxis(KeyCode positive, KeyCode negative)
         {
-            Positive = positive;
-            Negative = negative;
+            m_positive = positive;
+            m_negative = negative;
         }
 
         /// <summary>
@@ -35,9 +38,9 @@ namespace TCS.SimpleScripts
         /// <param name="axis">The MoveAxis to convert.</param>
         public static implicit operator float(MoveAxis axis)
         {
-            return (Input.GetKey(axis.Positive)
+            return (Input.GetKey(axis.m_positive)
                 ? 1.0f : 0.0f) -
-                (Input.GetKey(axis.Negative)
+                (Input.GetKey(axis.m_negative)
                 ? 1.0f : 0.0f);
         }
     }

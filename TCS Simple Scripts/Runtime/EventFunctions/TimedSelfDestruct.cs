@@ -1,5 +1,4 @@
 using UnityEngine;
-
 /// <summary>
 /// Used on short-lived graphical-effect prefabs to self-destruct after a fixed amount of time.
 /// Note: this is still safe to use, but is now superceded by SpecialFXGraphic: just set the
@@ -15,17 +14,11 @@ using UnityEngine;
 /// Also, performance note: self-destruction is a convenient idiom but not the most performant one. In games
 /// for mobile devices (and other lower-graphics-power platforms), it's best to use object pooling instead.
 /// </remarks>
-namespace Unity.BossRoom.Utils
-{
-    public class TimedSelfDestruct : MonoBehaviour
-    {
+namespace TCS.SimpleScripts.EventFunctions {
+    [AddComponentMenu("TCS/SimpleScripts/Event Functions/Timed Self Destruct")]
+    public class TimedSelfDestruct : MonoBehaviour {
         [SerializeField]
-        private float m_LifespanSeconds;
-
-        private void Start()
-        {
-            Destroy(gameObject, m_LifespanSeconds);
-        }
+        float m_lifespanSeconds;
+        void Start() => Destroy(gameObject, m_lifespanSeconds);
     }
-
 }

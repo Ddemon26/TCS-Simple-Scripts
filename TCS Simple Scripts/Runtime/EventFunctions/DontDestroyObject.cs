@@ -1,12 +1,13 @@
 using UnityEngine;
-namespace TCS.SimpleScripts {
+namespace TCS.SimpleScripts.EventFunctions {
+    [AddComponentMenu("TCS/SimpleScripts/Event Functions/Dont Destroy Object")]
     public class DontDestroyObject : MonoBehaviour {
         public bool m_autoUnparentOnAwake = true;
-        static DontDestroyObject s_instance;
+        static DontDestroyObject sInstance;
 
         void Awake() {
-            if (!s_instance) {
-                s_instance = this;
+            if (!sInstance) {
+                sInstance = this;
                 Initialize();
             } else {
                 Destroy(gameObject);

@@ -1,13 +1,13 @@
 using UnityEngine;
-namespace TCS.SimpleScripts
-{
+namespace TCS.SimpleScripts.Manipulators {
+    [AddComponentMenu("TCS/SimpleScripts/Manipulators/Simple Rotate Object")]
     public class SimpleRotateObject : MonoBehaviour {
         enum RotationAxis {
             X,
             Y,
             Z
         }
-        
+
         /// <summary>
         /// The axis around which the object will rotate.
         /// </summary>
@@ -25,16 +25,15 @@ namespace TCS.SimpleScripts
         /// </summary>
         [Tooltip("If true, the rotation direction will be reversed.")]
         [SerializeField] bool m_reverse;
-        
+
         float m_currentRotationAngle;
-        
+
         void Update() => RotateObject();
-        
-        void RotateObject()
-        {
+
+        void RotateObject() {
             var axis = GetRotationAxis();
             float speed = GetRotationSpeed();
-            
+
             UpdateRotationAngle(speed);
             ApplyRotation(axis);
         }
@@ -43,10 +42,8 @@ namespace TCS.SimpleScripts
         /// Gets the rotation axis based on the selected enum setDialogueManager.
         /// </summary>
         /// <returns>A Vector3 representing the rotation axis.</returns>
-        Vector3 GetRotationAxis()
-        {
-            return m_rotationAxis switch
-            {
+        Vector3 GetRotationAxis() {
+            return m_rotationAxis switch {
                 RotationAxis.X => Vector3.right,
                 RotationAxis.Y => Vector3.up,
                 RotationAxis.Z => Vector3.forward,
@@ -58,8 +55,7 @@ namespace TCS.SimpleScripts
         /// Gets the rotation speed, taking into account whether the rotation is reversed.
         /// </summary>
         /// <returns>The rotation speed as a float.</returns>
-        float GetRotationSpeed() 
-            => m_reverse ? -m_rotationSpeed * Time.deltaTime : m_rotationSpeed * Time.deltaTime;
+        float GetRotationSpeed() => m_reverse ? -m_rotationSpeed * Time.deltaTime : m_rotationSpeed * Time.deltaTime;
 
         /// <summary>
         /// Updates the current rotation angle based on the speed.
@@ -76,8 +72,6 @@ namespace TCS.SimpleScripts
         /// Applies the rotation to the object based on the current rotation angle and axis.
         /// </summary>
         /// <param name="axis">The axis around which to rotate the object.</param>
-        void ApplyRotation(Vector3 axis) {
-            transform.localRotation = Quaternion.AngleAxis(m_currentRotationAngle, axis);
-        }
+        void ApplyRotation(Vector3 axis) => transform.localRotation = Quaternion.AngleAxis(m_currentRotationAngle, axis);
     }
 }

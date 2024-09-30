@@ -1,14 +1,14 @@
 using UnityEngine;
-namespace TCS.SimpleScripts {
+namespace TCS.SimpleScripts.EventFunctions {
     /// <summary>
     /// This class destroys the GameObject it is attached to after a specified delay when the script instance is loaded.
     /// </summary>
-    [AddComponentMenu("TC/Utilities/Destroy On Awake")]
+    [AddComponentMenu("TCS/SimpleScripts/Event Functions/Destroy On Awake")]
     public class DestroyOnAwake : MonoBehaviour {
         /// <summary>
         /// The delay in seconds before the GameObject is destroyed.
         /// </summary>
-        [SerializeField] private float m_delay = 0.1f;
+        [SerializeField] float m_delay = 0.1f;
 
         /// <summary>
         /// Called when the script instance is being loaded.
