@@ -1,4 +1,5 @@
 using UnityEngine;
+
 namespace TCS.SimpleScripts.Manipulators {
     /// <summary>
     /// Utility struct to linearly interpolate between two Quaternion values. Allows for flexible linear interpolations
@@ -14,10 +15,14 @@ namespace TCS.SimpleScripts.Manipulators {
         // The duration of the interpolation, in seconds
         readonly float m_lerpTime;
 
+        // Cache of the previous target to detect changes
+        Quaternion m_previousTarget;
+
         public RotationLerper(Quaternion start, float lerpTime) {
             m_lerpStart = start;
             m_currentLerpTime = 0f;
             m_lerpTime = lerpTime;
+            m_previousTarget = start;
         }
 
         /// <summary>
@@ -27,18 +32,23 @@ namespace TCS.SimpleScripts.Manipulators {
         /// <param name="target"> End of the interpolation. </param>
         /// <returns> A Quaternion value between current and target. </returns>
         public Quaternion LerpRotation(Quaternion current, Quaternion target) {
-            if (current != target) {
+            // If the target has changed, reset the interpolation.
+            if (target != m_previousTarget) {
                 m_lerpStart = current;
                 m_currentLerpTime = 0f;
+                m_previousTarget = target;
             }
 
+            // Increment the elapsed time
             m_currentLerpTime += Time.deltaTime;
             if (m_currentLerpTime > m_lerpTime) {
                 m_currentLerpTime = m_lerpTime;
             }
 
-            float lerpPercentage = m_currentLerpTime / m_lerpTime;
+            // Calculate the interpolation percentage
+            float lerpPercentage = m_lerpTime > 0f ? m_currentLerpTime / m_lerpTime : 1f;
 
+            // Return the interpolated Quaternion using Slerp
             return Quaternion.Slerp(m_lerpStart, target, lerpPercentage);
         }
     }

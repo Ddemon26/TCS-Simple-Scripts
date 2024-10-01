@@ -12,16 +12,16 @@ namespace TentCitySoftware.utilities {
         public Transform m_constraintB;
 
         [Range(0f, 1f)]
-        public float m_blendContraints = 0f;
+        public float m_blendContraints;
         [Header("Blend Controls")]
         [Range(0f, 1f)]
-        public float m_blendTotal = 0f;
+        public float m_blendTotal;
         [Range(0f, 1f)]
-        public float m_blendPosition = 0f;
+        public float m_blendPosition;
         [Range(0f, 1f)]
-        public float m_blendRotation = 0f;
+        public float m_blendRotation;
         [Range(0f, 1f)]
-        public float m_blendScale = 0f;
+        public float m_blendScale;
 
         Vector3 m_positionWs;
         Quaternion m_rotation;
