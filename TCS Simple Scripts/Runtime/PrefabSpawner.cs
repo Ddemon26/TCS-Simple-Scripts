@@ -1,27 +1,17 @@
 using UnityEngine;
+namespace TCS.SimpleScripts {
+    public class PrefabSpawner : MonoBehaviour {
+        [SerializeField] bool m_useLocalPosition;
+        [SerializeField] bool m_useLocalRotation;
+        [SerializeField] GameObject m_prefab;
+        [SerializeField] Vector3 m_customPosition;
+        [SerializeField] Quaternion m_customRotation;
 
-namespace Unity.BossRoom.Utils
-{
-    public class PrefabSpawner : MonoBehaviour
-    {
-        [SerializeField]
-        bool m_UseLocalPosition;
-
-        [SerializeField]
-        bool m_UseLocalRotation;
-
-        [SerializeField]
-        GameObject m_Prefab;
-
-        [SerializeField]
-        Vector3 m_CustomPosition;
-
-        [SerializeField]
-        Quaternion m_CustomRotation;
-
-        public void Spawn()
-        {
-            Instantiate(m_Prefab, m_UseLocalPosition ? transform.position : m_CustomPosition, m_UseLocalRotation ? transform.rotation : m_CustomRotation);
-        }
+        public void Spawn() => Instantiate
+            (
+                m_prefab, m_useLocalPosition 
+                    ? transform.position : m_customPosition, m_useLocalRotation 
+                    ? transform.rotation : m_customRotation
+            );
     }
 }
