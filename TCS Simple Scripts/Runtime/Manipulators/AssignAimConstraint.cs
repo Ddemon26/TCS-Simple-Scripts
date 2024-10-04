@@ -2,6 +2,7 @@
 using UnityEngine.Animations;
 
 namespace TCS.SimpleScripts.Manipulators {
+    [AddComponentMenu("TCS/SimpleScripts/Manipulators/AssignAimConstraint")]
     [RequireComponent(typeof(AimConstraint))]
     public class AssignAimConstraint : MonoBehaviour {
         [Tooltip("The AimConstraint component to be assigned.")]
