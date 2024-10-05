@@ -1,5 +1,4 @@
-﻿using Sirenix.OdinInspector;
-using UnityEngine;
+﻿using UnityEngine;
 namespace TCS.SimpleScripts.Manipulators {
     /// <summary>
     /// This class allows a GameObject with a CharacterController to push Rigidbodies.
@@ -14,7 +13,7 @@ namespace TCS.SimpleScripts.Manipulators {
         [SerializeField, Range(0.5f, 5f)] public float m_strength = 1.1f;
 
         [Tooltip("Indicates whether the GameObject can push other Rigidbodies.")]
-        [ShowInInspector] public bool CanPush { get; private set; } = true;
+        public bool CanPush { get; private set; } = true;
 
         /// <summary>
         /// Sets the setDialogueManager indicating whether the GameObject can push other Rigidbodies.
