@@ -1,12 +1,22 @@
-
-# 🎨 TCS Simple Scripts
-
 ![Unity](https://img.shields.io/badge/Unity-2022.3+-black.svg?style=for-the-badge&logo=unity)
 ![Contributions welcome](https://img.shields.io/badge/Contributions-Welcome-brightgreen.svg?style=for-the-badge)
 
+# 🎨 TCS Simple Scripts
+
+✨ **TCS Simple Scripts** is a Unity tool designed to provide simple, effective scripts for common tasks in Unity projects. These utilities help manage GameObjects, handle input, and more.
+
+## 📜 Table of Contents
+
+- [Features](#-features)
+- [Getting Started](#-getting-started)
+- [Installation](#-installation)
+- [Usage](#-usage)
+- [Contributing](#-contributing)
+- [License](#-license)
+
 ***
 
-![Banner Image](https://via.placeholder.com/1000x300.png?text=assets+TCS+Simple+Scripts+for+Unity)
+![Simple](https://github.com/user-attachments/assets/b6fb6170-2fda-4d24-b405-59dd8a8a1d30)
 
 ***
 
@@ -23,23 +33,9 @@
 ![GitHub Last Commit](https://img.shields.io/github/last-commit/Ddemon26/TCS-Simple-Scripts)
 ![GitHub License](https://img.shields.io/github/license/Ddemon26/TCS-Simple-Scripts)
 
-✨ **TCS Simple Scripts** is a Unity tool designed to provide a collection of simple yet effective scripts for common tasks in Unity projects. These utilities help manage GameObjects, handle input, and more.
-
-![Demo GIF](https://media.giphy.com/media/l4Ep6KDbnTvdhGMP6/giphy.gif)
-
-## 📜 Table of Contents
-
-- [Features](#-features)
-- [Getting Started](#-getting-started)
-- [Installation](#-installation)
-- [Usage](#-usage)
-- [Customization](#-customization)
-- [Contributing](#-contributing)
-- [License](#-license)
-
 ## ✨ Features
 
-A set of reusable scripts designed to simplify GameObject management, input handling, and scene control in Unity. These scripts are designed to be lightweight and versatile, helping to boost productivity during game development.
+A set of reusable scripts designed to simplify GameObject management, input handling, and scene control in Unity. These scripts are lightweight and versatile, helping to boost productivity.
 
 ## Classes Overview
 
@@ -54,7 +50,7 @@ This repository contains the following C# classes:
 - **`DontDestroyObject`**  
   Prevents the object from being destroyed during scene transitions.
 - **`DontDestroyOnLoad`**  
-  Similar to `DontDestroyObject`, but specifically retains across loads.
+  Similar to `DontDestroyObject`, but retains across loads.
 - **`EnableOrDisableColliderOnAwake`**  
   Toggles a collider component on or off when the scene starts.
 - **`SelfDisable`**  
@@ -76,49 +72,72 @@ This repository contains the following C# classes:
 ### Object Manipulation
 
 - **`AssignAimConstraint`**  
-  Assigns an aim constraint to the object, directing its aim.
+  Assigns an aim constraint to the object.
 - **`GameObjectFollowMouse`**  
   Allows a GameObject to follow the mouse pointer on screen.
 - **`PositionLerper`**  
   Smoothly interpolates an object's position.
 - **`RotationLerper`**  
-  Interpolates the rotation of an object over time.
+  Interpolates the rotation of an object.
 - **`SimpleRigidBodyPush`**  
-  Applies a force to a rigidbody for basic physics-based interactions.
+  Applies force to a rigidbody for basic physics-based interactions.
 - **`SimpleRotateObject`**  
   Rotates an object based on input or predefined logic.
 - **`SimpleTranslateObject`**  
-  Translates an object in space over time.
+  Translates an object over time.
 - **`TransformContraint`**  
-  Enforces constraints on an object’s transform for position, rotation, or scale.
+  Enforces constraints on an object’s transform.
 
 ## 🚀 Getting Started
 
-Follow these steps to start using **TCS Simple Scripts** in your Unity project:
+To get started with **TCS Simple Scripts**, follow these steps:
 
-1. **Open the Simple Scripts**: In Unity, navigate to `Tools > Simple Scripts` to access the tool's editor window.
-2. **Initialize Systems**: Integrate the simple scripts into your scene setup.
-3. **Leverage Simple Script Features**: Utilize the scripts to easily manage GameObjects, handle input, and enhance your project’s interactivity.
+1. **Download the Repository**  
+   Download the ZIP file or copy the repository to your machine.
+
+2. **Add Scripts to Your Unity Project**  
+   Copy the `TCS Simple Scripts` folder into your Unity project's `Assets` folder.
+
+3. **Open the Unity Editor**  
+   Open Unity, and the scripts will be ready to use.
+
+4. **Access the Scripts**  
+   Drag and drop them onto GameObjects or attach them via code.
+
+5. **Explore the Demo Scene**  
+   Open the demo scene to see the scripts in action.
 
 ## 🔧 Installation
 
-1. Clone or download this repository.
-2. Place the folder in the `Assets` directory of your Unity project.
+**Install using Git Url**
+```
+https://github.com/Ddemon26/TCS-Simple-Scripts.git
+```
+
+**Downloading Zip Files**
+1. Download this repository.
+2. Add the `TCS Simple Scripts` folder to the `Assets` directory in your Unity project.
 3. Access the Simple Scripts through the Unity Editor under the `Tools` menu.
+
+**Clone The Repository**
+1. Open your terminal or command prompt.
+2. Navigate to your Unity project folder.
+3. Clone the repository into your Unity project's `Assets` folder.
+4. After cloning, open Unity, and the scripts will be available under the `Tools` menu for use in your project.
 
 ## 🛠 Usage
 
-To use the scripts effectively, ensure that they are properly attached to GameObjects within your scene. Explore the examples in this repository to see how the various scripts can be customized and combined for unique functionality.
+Attach the scripts to GameObjects in your scene. Explore the examples in the repository to see how to customize them.
 
 ## 🤝 Contributing
 
-Contributions are always welcome! Here's how to contribute:
+Contributions are welcome! Here's how:
 
 1. Fork the repository.
-2. Create a new feature branch (`git checkout -b feature/NewFeature`).
-3. Make your changes and commit them (`git commit -m 'Add new feature'`).
+2. Create a new branch (`git checkout -b feature/NewFeature`).
+3. Commit your changes (`git commit -m 'Add new feature'`).
 4. Push the branch (`git push origin feature/NewFeature`).
-5. Open a pull request, and we’ll review your changes.
+5. Open a pull request.
 
 ## 📄 License
 
