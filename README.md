@@ -1,96 +1,83 @@
-# 🎨 TCS Simple Scripts
 
-![Unity](https://img.shields.io/badge/Unity-2022.3+-black.svg?style=for-the-badge&logo=unity)
-![Contributions welcome](https://img.shields.io/badge/Contributions-Welcome-brightgreen.svg?style=for-the-badge)
-[![Odin Inspector](https://img.shields.io/badge/Odin_Inspector-Required-blue?style=for-the-badge)](https://odininspector.com/)
-
-***
-![Banner Image](https://via.placeholder.com/1000x300.png?text=assets+TCS+Simple+Scripts+for+Unity)
-***
-
-![GitHub Forks](https://img.shields.io/github/forks/Ddemon26/TCS-Simple-Scripts)
-![GitHub Contributors](https://img.shields.io/github/contributors/Ddemon26/TCS-Simple-Scripts)
-
-![GitHub Stars](https://img.shields.io/github/stars/Ddemon26/TCS-Simple-Scripts)
-![GitHub Repo Size](https://img.shields.io/github/repo-size/Ddemon26/TCS-Simple-Scripts)
+# TCS Simple Scripts
 
 [![Join our Discord](https://img.shields.io/badge/Discord-Join%20Us-7289DA?logo=discord&logoColor=white)](https://discord.gg/knwtcq3N2a)
 ![Discord](https://img.shields.io/discord/1047781241010794506)
 
-![GitHub Issues](https://img.shields.io/github/issues/Ddemon26/TCS-Simple-Scripts)
-![GitHub Pull Requests](https://img.shields.io/github/issues-pr/Ddemon26/TCS-Simple-Scripts)
-![GitHub Last Commit](https://img.shields.io/github/last-commit/Ddemon26/TCS-Simple-Scripts)
+![GitHub Forks](https://img.shields.io/github/forks/Ddemon26/TCS-Simple-Scripts)
+![GitHub Contributors](https://img.shields.io/github/contributors/Ddemon26/TCS-Simple-Scripts)
+![GitHub Stars](https://img.shields.io/github/stars/Ddemon26/TCS-Simple-Scripts)
+![GitHub Repo Size](https://img.shields.io/github/repo-size/Ddemon26/TCS-Simple-Scripts)
 
-![GitHub License](https://img.shields.io/github/license/Ddemon26/TCS-Simple-Scripts)
-![Static Badge](https://img.shields.io/badge/Noobs-0-blue)
+## Overview
 
-✨ **TCS Simple Scripts** is a Unity tool designed to provide a collection of simple yet useful scripts for common tasks in Unity projects. It includes utilities for managing GameObjects, handling input, and more.
+**TCS Simple Scripts** is a collection of lightweight and useful tools designed for Unity developers. These scripts focus on simplifying common tasks such as prefab management, camera manipulation, event handling, and more.
 
-![Demo GIF](https://media.giphy.com/media/l4Ep6KDbnTvdhGMP6/giphy.gif)
+### Key Features:
+- **PrefabSpawner**: Easily instantiate prefabs with configurable local/global position and rotation.
+- **FlyCamera**: Implement free camera movement for development purposes.
+- **Manipulators**: Add interactive manipulations to objects within the scene.
+- **Event Functions**: Handle custom events and actions in the scene efficiently.
 
-## 📜 Table of Contents
-- Features
-- Getting Started
-- Installation
-- Usage
-- Customization
-- Contributing
-- License
+## Available Classes
 
-## ✨ Features
+### 1. PrefabSpawner
+This class allows for customizable prefab spawning. It provides the following functionalities:
+- **Custom Positioning and Rotation**: You can choose between using the local position/rotation of the GameObject or specifying custom values.
+- **Prefab Instantiation**: The class instantiates prefabs dynamically, offering flexibility for runtime object creation.
 
-- **DontDestroy**: Ensures that a GameObject is not destroyed when loading a new scene.
-- **DestroyOnAwake**: Destroys a GameObject after a specified delay when the script instance is loaded.
-- **SimpleRotateObject**: Rotates a GameObject around a specified axis at a specified speed.
-- **SimpleRigidBodyPush**: Allows a GameObject with a CharacterController to push Rigidbodies.
-- **SimpleCameraController**: A simple camera controller for moving and rotating the camera using keyboard and mouse input.
+### 2. Event Functions Classes
 
-## 🚀 Getting Started
+- **DestroyOnAwake**: Handles object destruction on awake.
+- **DontDestroyObject**: Ensures that certain objects are not destroyed when new scenes are loaded.
+- **DontDestroyOnLoad**: Prevents objects from being destroyed during scene transitions.
+- **EnableOrDisableColliderOnAwake**: Manages enabling or disabling colliders on GameObjects at awake.
+- **SelfDisable**: Disables a GameObject after a certain condition is met.
+- **TimedSelfDestruct**: Destroys GameObjects after a set amount of time.
+- **UnsetParentOnAwake**: Removes the parent of a GameObject when the scene starts.
 
-Follow these steps to start using the **TCS Simple Scripts**:
+### 3. Manipulators Classes
 
-1. **Install Dependencies**: Ensure that [Odin Inspector](https://odininspector.com/) is installed, as it is required for custom editor features.
+- **AssignAimConstraint**: Adds constraints for objects aiming at other targets.
+- **GameObjectFollowMouse**: Makes GameObjects follow the mouse pointer during runtime.
+- **PositionLerper**: Smoothly interpolates (lerps) the position of objects.
+- **RandomMovement**: Adds random movement behaviors to objects in the scene.
+- **RotationLerper**: Smoothly interpolates the rotation of objects.
+- **SimpleRigidBodyPush**: Applies a simple push force to rigidbody objects.
+- **SimpleRotateObject**: Rotates objects along specified axes.
+- **SimpleTranslateObject**: Moves objects along specified directions.
+- **TransformConstraint**: Adds constraints to limit the transformation of objects.
 
-2. **Open the Simple Scripts**: In Unity, navigate to `Tools > Simple Scripts` to open the tool's editor window.
+## Getting Started
 
-3. **Initialize Systems**: Set up the simple scripts in your game scene.
+### Prerequisites
+- **Unity Engine**: The scripts are built for use with Unity (version 2020 and later).
+- **Basic Understanding of Unity Components**: A basic knowledge of Unity's GameObjects, prefabs, and components is required.
 
-4. **Use Simple Script Features**: Utilize the provided scripts to manage GameObjects, handle input, and more.
+### Installation
 
-## 🔧 Installation
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/Ddemon26/TCS-Simple-Scripts.git
+    ```
 
-1. Clone or download this repository.
-2. Add the folder to the `Assets` directory in your Unity project.
-3. Install [Odin Inspector](https://odininspector.com/).
-4. Open the Unity Editor and access the Simple Scripts through the `Tools` menu.
+2. Import the scripts into your Unity project:
+    - Copy the contents from the `Runtime` folder into your Unity project’s `Assets` directory.
 
-## 🛠️ Usage
+## Contributing
 
-1. **DontDestroy**: Attach the `DontDestroy` script to a GameObject to ensure it is not destroyed when loading a new scene.
-2. **DestroyOnAwake**: Attach the `DestroyOnAwake` script to a GameObject to destroy it after a specified delay.
-3. **SimpleRotateObject**: Attach the `SimpleRotateObject` script to a GameObject to rotate it around a specified axis at a specified speed.
-4. **SimpleRigidBodyPush**: Attach the `SimpleRigidBodyPush` script to a GameObject with a CharacterController to allow it to push Rigidbodies.
-5. **SimpleCameraController**: Attach the `SimpleCameraController` script to a camera to enable simple movement and rotation using keyboard and mouse input.
+Contributions are welcome! If you'd like to contribute, please fork the repository and use a feature branch. Pull requests are warmly welcomed.
 
-## ⚙️ Customization
+1. Fork the project
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-- **DontDestroy**: No customization options.
-- **DestroyOnAwake**: Customize the delay before destruction by modifying the `m_delay` field.
-- **SimpleRotateObject**: Customize the rotation axis, speed, and direction by modifying the `m_rotationAxis`, `m_rotationSpeed`, and `m_reverse` fields.
-- **SimpleRigidBodyPush**: Customize the push layers and strength by modifying the `m_pushLayers` and `m_strength` fields.
-- **SimpleCameraController**: Customize the movement keys, boost factor, position lerp time, mouse sensitivity curve, rotation lerp time, cursor lock state, and Y-axis inversion by modifying the respective fields.
+## License
 
-## 🤝 Contributing
+Distributed under the MIT License. See `LICENSE` for more information.
 
-Contributions are welcome! To contribute:
+## Contact
 
-1. Fork the repository.
-2. Create a new feature branch (`git checkout -b feature/NewFeature`).
-3. Make your changes and commit (`git commit -m 'Add new feature'`).
-4. Push to the branch (`git push origin feature/NewFeature`).
-5. Open a pull request.
-
-## 📄 License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
+Feel free to reach out via [Discord](https://discord.gg/knwtcq3N2a) if you have any questions or need support!
