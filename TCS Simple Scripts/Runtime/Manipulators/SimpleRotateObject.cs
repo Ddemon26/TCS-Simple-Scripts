@@ -5,7 +5,7 @@ namespace TCS.SimpleScripts.Manipulators {
         enum RotationAxis {
             X,
             Y,
-            Z
+            Z,
         }
 
         /// <summary>
@@ -47,7 +47,7 @@ namespace TCS.SimpleScripts.Manipulators {
                 RotationAxis.X => Vector3.right,
                 RotationAxis.Y => Vector3.up,
                 RotationAxis.Z => Vector3.forward,
-                _ => Vector3.zero
+                _ => Vector3.zero,
             };
         }
 
