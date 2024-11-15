@@ -30,7 +30,7 @@ namespace TCS.SimpleScripts.Manipulators {
             var source = new ConstraintSource
             {
                 sourceTransform = GameObject.FindGameObjectWithTag(m_cameraTag).transform,
-                weight = 1
+                weight = 1,
             };
 
             m_aimConstraint.AddSource(source);
