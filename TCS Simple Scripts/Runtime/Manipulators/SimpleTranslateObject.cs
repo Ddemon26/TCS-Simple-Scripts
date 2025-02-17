@@ -48,18 +48,12 @@ namespace TCS.SimpleScripts.Manipulators {
             transform.position = Vector3.Lerp(m_startPoint, GetTargetPosition(), pingPongFactor);
         }
 
-        Vector3 GetTargetPosition() => m_endPointObject ? m_endPointObject.transform.position : m_endPoint;
-
+        Vector3 GetTargetPosition() => m_startPoint + m_endPoint;
         bool HasReachedTarget(Vector3 currentPosition, Vector3 targetPosition) => Vector3.Distance(currentPosition, targetPosition) < 0.001f;
-
         public void StartMoving() => m_isMoving = true;
-
         public void StopMoving() => m_isMoving = false;
-
         public void ResetPosition() => transform.position = m_startPoint;
-
         public void SetEndPoint(Vector3 end) => m_endPoint = end;
-
         public void SetEndPointObject(GameObject endObject) => m_endPointObject = endObject;
     }
 }
