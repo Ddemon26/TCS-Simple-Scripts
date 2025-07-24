@@ -1,8 +1,7 @@
 ﻿using System;
 using UnityEngine;
 using UnityEngine.Serialization;
-namespace TCS.SimpleScripts.FlyCamera
-{
+namespace TCS.SimpleScripts.FlyCamera {
     /// <summary>
     /// Represents an axis of movement, with positive and negative directions.
     /// </summary>
@@ -39,9 +38,9 @@ namespace TCS.SimpleScripts.FlyCamera
         public static implicit operator float(MoveAxis axis)
         {
             return (Input.GetKey(axis.m_positive)
-                ? 1.0f : 0.0f) -
-                (Input.GetKey(axis.m_negative)
-                ? 1.0f : 0.0f);
+                       ? 1.0f : 0.0f) -
+                   (Input.GetKey(axis.m_negative)
+                       ? 1.0f : 0.0f);
         }
     }
 }

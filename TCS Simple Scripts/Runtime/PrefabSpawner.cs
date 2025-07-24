@@ -8,10 +8,10 @@ namespace TCS.SimpleScripts {
         [SerializeField] Quaternion m_customRotation;
 
         public void Spawn() => Instantiate
-            (
-                m_prefab, m_useLocalPosition 
-                    ? transform.position : m_customPosition, m_useLocalRotation 
-                    ? transform.rotation : m_customRotation
-            );
+        (
+            m_prefab, m_useLocalPosition 
+                ? transform.position : m_customPosition, m_useLocalRotation 
+                ? transform.rotation : m_customRotation
+        );
     }
 }
